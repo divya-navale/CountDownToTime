@@ -1,0 +1,134 @@
+:root {
+  --bg-color-dark: #121212;
+  --text-color-dark: #e0e0e0;
+  --highlight-color-dark: #88c0d0;
+  /* Nord frosty blue */
+  --input-focus-dark: #5e81ac;
+  /* Nord darker blue */
+
+  --bg-color-light: #eceff4;
+  /* Nord light grey */
+  --text-color-light: #2e3440;
+  /* Nord very dark blue/grey */
+  --highlight-color-light: #5e81ac;
+  /* Nord darker blue */
+  --input-focus-light: #bf616a;
+  /* Nord red for contrast */
+}
+
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* Changed from 'center' to 'flex-start' to reduce top gap */
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  /* Added padding-top to give it some space from the edge */
+  padding-top: 15vh;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App.dark {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.App.light {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.countdown-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.big-timer {
+  /* Increased the clamp values to make the timer larger */
+  font-size: clamp(4rem, 25vw, 16rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1;
+}
+
+.App.dark .big-timer {
+  color: var(--highlight-color-dark);
+}
+
+.App.light .big-timer {
+  color: var(--highlight-color-light);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: clamp(2rem, 5vw, 1.75rem);
+  flex-wrap: wrap;
+}
+
+.controls span {
+  opacity: 0.8;
+}
+
+.controls input {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  border-bottom: 2px solid transparent;
+  width: 3ch;
+  /* Approx 2 characters wide */
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.controls input:focus {
+  outline: none;
+}
+
+.App.dark .controls input:focus {
+  border-bottom-color: var(--input-focus-dark);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.App.light .controls input:focus {
+  border-bottom-color: var(--input-focus-light);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Hide number input spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+  transform: scale(1.1) rotate(15deg);
+}

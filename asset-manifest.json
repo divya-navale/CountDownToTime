@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/countdown-to-time/static/css/main.360f336c.css",
-    "main.js": "/countdown-to-time/static/js/main.7e6b0998.js",
-    "static/js/453.cca6e35b.chunk.js": "/countdown-to-time/static/js/453.cca6e35b.chunk.js",
-    "index.html": "/countdown-to-time/index.html",
-    "main.360f336c.css.map": "/countdown-to-time/static/css/main.360f336c.css.map",
-    "main.7e6b0998.js.map": "/countdown-to-time/static/js/main.7e6b0998.js.map",
-    "453.cca6e35b.chunk.js.map": "/countdown-to-time/static/js/453.cca6e35b.chunk.js.map"
+    "main.css": "/CountDownToTime/static/css/main.360f336c.css",
+    "main.js": "/CountDownToTime/static/js/main.82611589.js",
+    "static/js/453.cca6e35b.chunk.js": "/CountDownToTime/static/js/453.cca6e35b.chunk.js",
+    "index.html": "/CountDownToTime/index.html",
+    "main.360f336c.css.map": "/CountDownToTime/static/css/main.360f336c.css.map",
+    "main.82611589.js.map": "/CountDownToTime/static/js/main.82611589.js.map",
+    "453.cca6e35b.chunk.js.map": "/CountDownToTime/static/js/453.cca6e35b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.360f336c.css",
-    "static/js/main.7e6b0998.js"
+    "static/js/main.82611589.js"
   ]
 }
